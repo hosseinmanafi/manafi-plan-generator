@@ -1,0 +1,1 @@
+manafi-plan-generator
