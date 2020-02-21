@@ -21,7 +21,7 @@ public class Payload {
 	public Payload(PayloadRequest payloadRequest) {
 		this.payloadRequest = payloadRequest;
 		this.upperDuration = payloadRequest.getDuration();
-		payloadResponse.setAnnuity(219.36);
+		payloadResponse.setAnnuity(calcAnnuity(payloadRequest.getLoanAmount(), payloadRequest.getNominalRate() /100 , payloadRequest.getDuration()));
 	}
 	
 	public void computing() throws ParseException {
@@ -71,6 +71,11 @@ public class Payload {
 		}
 	}	
 	
+	
+	public double calcAnnuity(double amount, double rate, double period) {
+		double annuity = ((rate/12) * amount) / (1 - Math.pow((1 + (rate/12)), -1 * period));
+		return changeDoubleFormat(annuity);
+	}
 	
 	private double changeDoubleFormat(double number) {
 		DecimalFormat num = new DecimalFormat("0.00");
