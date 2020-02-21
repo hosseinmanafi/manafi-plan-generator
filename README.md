@@ -44,6 +44,7 @@
 	   This layer contains 5 methods :
 	   
 	   computing          : This method includes implementing the loan calculator algorithm and building the JSON output
+	   calcAnnuity        : This method is used to calculate the principal value with the Annuity Payment formula 
 	   changeDoubleFormat : This method is used to convert the number format to "0.00"
 	   computPrincipal    : This method is used to calculate the principal value with the principal = annuity - interest formula
 	   computInterest     : This method is used to calculate the interest value with the interest = (nominalRate * 30 * loanAmount) / 36000 formula
