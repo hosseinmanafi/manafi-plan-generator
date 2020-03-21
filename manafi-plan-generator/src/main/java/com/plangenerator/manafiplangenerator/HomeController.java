@@ -22,6 +22,7 @@ public class HomeController {
 		Payload payload = new Payload(payloadRequest);
 		payload.computing();
 		String a = "1";
+		String b = "2";
 		String result = payload.toString();		
 		return result;
 	}
