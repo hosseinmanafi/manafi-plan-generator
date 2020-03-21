@@ -20,7 +20,8 @@ public class HomeController {
 	public String createJSON(@RequestBody PayloadRequest payloadRequest) throws ParseException {
 		
 		Payload payload = new Payload(payloadRequest);
-		payload.computing();		
+		payload.computing();
+		String a = "1";
 		String result = payload.toString();		
 		return result;
 	}
